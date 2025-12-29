@@ -1,35 +1,41 @@
 /* ページ全体 */
 body {
   font-family: sans-serif;
-  background-color: #f2f2f2;
+  background-color: #2e2e2e; /* 暗めのグレー */
   margin: 0;
-  padding: 20px;
+  padding: 0 20px;
+  color: #f5f5f5; /* 文字色を明るくして読みやすく */
 }
 
 /* ページタイトルを中央寄せ */
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 20px 0;
 }
 
-/* 目次スタイル */
+/* 目次を固定 */
 #toc {
-  max-width: 600px;
-  margin: 0 auto 30px auto;
-  background: #ffffff;
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  width: 180px;
+  background: #3e3e3e;
   padding: 15px 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  max-height: 70vh;
+  overflow-y: auto;
 }
 
 #toc h2 {
-  margin-top: 0;
   text-align: center;
+  margin-top: 0;
 }
 
 #toc ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 
 #toc li {
@@ -38,7 +44,7 @@ h1 {
 
 #toc a {
   text-decoration: none;
-  color: #007bff;
+  color: #ffd700;
 }
 
 #toc a:hover {
@@ -47,14 +53,12 @@ h1 {
 
 /* 記事の枠 */
 article {
-  background: #ffffff;
-  padding: 20px 24px;
-  margin-bottom: 32px;
+  background: #444444;
+  padding: 20px 30px;
+  margin: 30px auto;
   border-radius: 10px;
-  max-width: 600px;        /* 幅を制限して読みやすく */
-  margin-left: auto;
-  margin-right: auto;      /* 記事を中央に配置 */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 700px;       /* 幅を少し広げた */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 /* 日付を左寄せ */
@@ -62,6 +66,7 @@ article h2 {
   text-align: left !important;
   font-size: 1.2em;
   margin-bottom: 10px;
+  color: #ffd700;
 }
 
 /* 本文を左寄せで読みやすく */
@@ -69,12 +74,20 @@ article p {
   text-align: left;
   line-height: 1.8;
   margin: 0;
+  color: #f5f5f5;
 }
 
-/* レスポンシブ対応：スマホでは幅を画面に合わせる */
-@media (max-width: 640px) {
-  #toc, article {
+/* レスポンシブ対応：スマホ */
+@media (max-width: 800px) {
+  #toc {
+    position: static;
+    width: 100%;
+    max-height: none;
+    margin-bottom: 20px;
+  }
+
+  article {
     max-width: 100%;
-    padding: 15px 16px;
+    padding: 15px 20px;
   }
 }
