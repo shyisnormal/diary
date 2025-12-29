@@ -17,24 +17,6 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* 記事全体 */
+/* 記事全体（枠なし・中央寄せのみ） */
 article {
-  max-width: 800px;
-  margin: 0 auto 40px;
-  padding: 24px 28px;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-
-/* 日付 */
-article h2 {
-  font-size: 22px;
-  font-weight: normal;
-  margin-bottom: 12px;
-  color: #666;
-}
-
-/* 本文 */
-article p {
-  margin: 0;
-}
+  max-width: 800
