@@ -3,91 +3,37 @@ body {
   font-family: sans-serif;
   background-color: #2e2e2e; /* 暗めのグレー */
   margin: 0;
-  padding: 0 20px;
+  padding: 20px;
   color: #f5f5f5; /* 文字色を明るくして読みやすく */
+  line-height: 1.8;
+  font-size: 18px; /* フォントサイズ大きめ */
 }
 
-/* ページタイトルを中央寄せ */
+/* ページタイトル */
 h1 {
   text-align: center;
-  margin: 20px 0;
+  margin-bottom: 40px;
+  font-size: 32px;
 }
 
-/* 目次を固定 */
-#toc {
-  position: fixed;
-  top: 60px;
-  right: 20px;
-  width: 180px;
-  background: #3e3e3e;
-  padding: 15px 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  max-height: 70vh;
-  overflow-y: auto;
-}
-
-#toc h2 {
-  text-align: center;
-  margin-top: 0;
-}
-
-#toc ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-#toc li {
-  margin: 5px 0;
-}
-
-#toc a {
-  text-decoration: none;
-  color: #ffd700;
-}
-
-#toc a:hover {
-  text-decoration: underline;
-}
-
-/* 記事の枠 */
+/* 日記記事 */
 article {
-  background: #444444;
-  padding: 20px 30px;
-  margin: 30px auto;
-  border-radius: 10px;
-  max-width: 700px;       /* 幅を少し広げた */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  margin-bottom: 40px;
+  max-width: 800px;   /* 幅を広めに */
+  margin-left: auto;
+  margin-right: auto;  /* ページ中央に配置 */
 }
 
 /* 日付を左寄せ */
 article h2 {
   text-align: left !important;
-  font-size: 1.2em;
+  font-size: 22px;    /* 日付も少し大きめ */
   margin-bottom: 10px;
-  color: #ffd700;
+  color: #ffd700;     /* 日付を目立たせる */
 }
 
-/* 本文を左寄せで読みやすく */
+/* 本文 */
 article p {
   text-align: left;
-  line-height: 1.8;
   margin: 0;
-  color: #f5f5f5;
-}
-
-/* レスポンシブ対応：スマホ */
-@media (max-width: 800px) {
-  #toc {
-    position: static;
-    width: 100%;
-    max-height: none;
-    margin-bottom: 20px;
-  }
-
-  article {
-    max-width: 100%;
-    padding: 15px 20px;
-  }
 }
