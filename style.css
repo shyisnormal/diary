@@ -2,7 +2,8 @@
 body {
   font-family: sans-serif;
   background-color: #f2f2f2;
-  margin: 20px;
+  margin: 0;
+  padding: 20px;
 }
 
 /* ページタイトルを中央寄せ */
@@ -16,18 +17,30 @@ article {
   padding: 20px 24px;
   margin-bottom: 32px;
   border-radius: 10px;
-  max-width: 800px;   /* 読みやすく幅を制限 */
+  max-width: 600px;        /* デスクトップでの幅 */
   margin-left: auto;
-  margin-right: auto;  /* 記事を画面中央に配置 */
+  margin-right: auto;      /* 記事を画面中央に配置 */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* 日付を中央寄せ */
+/* 日付を左寄せ */
 article h2 {
-  text-align: center;
+  text-align: left;
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
-/* 本文を左寄せ */
+/* 本文を左寄せで読みやすく */
 article p {
   text-align: left;
   line-height: 1.8;
+  margin: 0;
+}
+
+/* レスポンシブ対応：スマホでは幅を画面に合わせる */
+@media (max-width: 640px) {
+  article {
+    padding: 15px 16px;
+    max-width: 100%;       /* スマホでは画面幅いっぱいに */
+  }
 }
