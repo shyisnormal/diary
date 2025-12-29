@@ -1,4 +1,4 @@
-/* ページ全体の背景やフォントなど */
+/* ページ全体 */
 body {
   font-family: sans-serif;
   background-color: #f2f2f2;
@@ -16,9 +16,12 @@ article {
   padding: 20px 24px;
   margin-bottom: 32px;
   border-radius: 10px;
+  max-width: 800px;   /* 読みやすく幅を制限 */
+  margin-left: auto;
+  margin-right: auto;  /* 記事を画面中央に配置 */
 }
 
-/* 日付タイトルを中央寄せ */
+/* 日付を中央寄せ */
 article h2 {
   text-align: center;
 }
