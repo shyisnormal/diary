@@ -9,20 +9,18 @@ body {
   padding: 20px;
 }
 
-/* ページのコンテンツ幅を制限して中央寄せ */
+/* コンテナ */
 .container {
-  width: 70%;           /* 画面幅の70% */
-  max-width: 1200px;    /* 最大幅 */
-  min-width: 600px;     /* 最小幅（狭すぎないように） */
-  margin: 0 auto;       /* 中央寄せで左右余白確保 */
-  padding: 0 20px;      /* 内側余白 */
+  width: min(1200px, 90%);  /* 最大1200px、画面幅が狭ければ90% */
+  margin: 0 auto;            /* 中央寄せで左右余白 */
+  padding: 0 40px;           /* 内側余白 */
   box-sizing: border-box;
 }
 
 /* タイトル */
 h1 {
   text-align: center;
-  font-size: 42px;
+  font-size: 42px;    
   font-weight: normal;
   margin-bottom: 40px;
 }
@@ -36,4 +34,26 @@ article {
 article h2 {
   font-size: 20px;        
   font-weight: normal;     
-  margin-top: 30p
+  margin-top: 30px;
+  margin-bottom: 10px;
+  line-height: 1.5;       
+  border-bottom: 1px solid #cccccc; /* 背景に見える薄い線 */
+  padding-bottom: 5px;
+}
+
+/* 本文 */
+article p {
+  margin: 10px 0 0 0;
+}
+
+/* スマホ対応 */
+@media (max-width: 800px) {
+  .container {
+    width: 95%;            /* スマホでは画面幅に合わせて広げる */
+    padding: 0 20px;       /* 内側余白も少なめに */
+  }
+
+  h1 {
+    font-size: 36px;       /* タイトルを少し小さく */
+  }
+}
