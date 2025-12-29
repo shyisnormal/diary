@@ -22,4 +22,20 @@ article {
   margin-bottom: 40px;
   max-width: 850px;   /* 幅を広めに */
   margin-left: auto;
-  margin-right: auto;  /* ペ*
+  margin-right: auto;  /* ページ中央に配置 */
+}
+
+/* 日付 */
+article h2 {
+  text-align: left !important;
+  font-size: 22px;    /* 日付も少し大きめ */
+  margin-bottom: 12px;
+  color: #8b6d5c;     /* tfukuo.com風ブラウン */
+}
+
+/* 本文 */
+article p {
+  text-align: left;
+  margin: 0;
+  color: #3b3b3b;
+}
