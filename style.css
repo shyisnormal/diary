@@ -9,6 +9,40 @@ body {
 /* ページタイトルを中央寄せ */
 h1 {
   text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 目次スタイル */
+#toc {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#toc h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#toc ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#toc li {
+  margin: 5px 0;
+}
+
+#toc a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+#toc a:hover {
+  text-decoration: underline;
 }
 
 /* 記事の枠 */
@@ -17,15 +51,15 @@ article {
   padding: 20px 24px;
   margin-bottom: 32px;
   border-radius: 10px;
-  max-width: 600px;        /* デスクトップでの幅 */
+  max-width: 600px;        /* 幅を制限して読みやすく */
   margin-left: auto;
-  margin-right: auto;      /* 記事を画面中央に配置 */
+  margin-right: auto;      /* 記事を中央に配置 */
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 /* 日付を左寄せ */
 article h2 {
-  text-align: left;
+  text-align: left !important;
   font-size: 1.2em;
   margin-bottom: 10px;
 }
@@ -39,8 +73,8 @@ article p {
 
 /* レスポンシブ対応：スマホでは幅を画面に合わせる */
 @media (max-width: 640px) {
-  article {
+  #toc, article {
+    max-width: 100%;
     padding: 15px 16px;
-    max-width: 100%;       /* スマホでは画面幅いっぱいに */
   }
 }
