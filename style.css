@@ -11,16 +11,17 @@ body {
 
 /* ページのコンテンツ幅を制限して中央寄せ */
 .container {
-  max-width: 900px;   /* 表示エリアの最大幅を少し広げる */
-  margin: 0 auto;     /* 左右中央寄せで自然な余白を作る */
-  padding: 0 20px;    /* 最小限の左右余白 */
+  width: 90%;         /* 画面幅に応じて変動 */
+  max-width: 900px;   /* 最大幅 */
+  margin: 0 auto;     /* 中央寄せで左右余白を確保 */
   box-sizing: border-box;
+  padding: 0;         /* パディングは不要、余白は幅で調整 */
 }
 
 /* タイトル */
 h1 {
   text-align: center;
-  font-size: 42px;    /* 少し大きく */
+  font-size: 42px;    
   font-weight: normal;
   margin-bottom: 40px;
 }
@@ -32,8 +33,15 @@ article {
 
 /* 日付 */
 article h2 {
-  font-size: 20px;        /* 本文より少し小さく */
-  font-weight: normal;     /* 太字なし */
+  font-size: 20px;        
+  font-weight: normal;     
   margin-top: 30px;
   margin-bottom: 10px;
-  li
+  line-height: 1.5;       
+  border-bottom: 1px solid #dcdcdc; 
+  padding-bottom: 5px;
+}
+
+/* 本文 */
+article p {
+  margin: 10px 0 0
