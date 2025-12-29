@@ -12,36 +12,50 @@
   <!-- 目次 -->
   <nav id="toc">
     <h2>目次</h2>
-    <ul>
-      <li><a href="#d2025-01-01">2025-01-01</a></li>
-      <li><a href="#d2025-01-02">2025-01-02</a></li>
-      <li><a href="#d2025-01-03">2025-01-03</a></li>
+    <ul id="toc-list">
+      <!-- JavaScriptで自動生成されます -->
     </ul>
   </nav>
 
-  <!-- 日記記事1 -->
-  <article id="d2025-01-01">
+  <!-- 日記記事 -->
+  <article>
     <h2>2025-01-01</h2>
     <p>
-      9時ごろ起床。あまり寝れた感じがしなかった。ふるさと納税で注文したタオルが届いたので、使う前に洗濯機で洗った。乾燥機は、量が多いと乾かなかった。
+      9時ごろ起床。あまり寝れた感じがしなかった。ふるさと納税で注文したタオルが届いたので、使う前に洗濯機で洗った。
     </p>
   </article>
 
-  <!-- 日記記事2 -->
-  <article id="d2025-01-02">
+  <article>
     <h2>2025-01-02</h2>
     <p>
-      朝から雨だったので家で読書。午後は近所を散歩して、カフェでコーヒーを飲んだ。日が短いので夕方には暗くなるが、のんびりできた。
+      朝から雨だったので家で読書。午後は近所を散歩して、カフェでコーヒーを飲んだ。
     </p>
   </article>
 
-  <!-- 日記記事3 -->
-  <article id="d2025-01-03">
+  <article>
     <h2>2025-01-03</h2>
     <p>
       午前中に買い物。昼食後に映画を観に行った。夜は軽くジョギングして体を動かした。
     </p>
   </article>
+
+  <script>
+    // 自動で目次を生成
+    const tocList = document.getElementById('toc-list');
+    const articles = document.querySelectorAll('article');
+    articles.forEach((article, index) => {
+      const h2 = article.querySelector('h2');
+      const id = 'd' + h2.textContent.replace(/-/g, '');
+      article.id = id;
+
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = '#' + id;
+      a.textContent = h2.textContent;
+      li.appendChild(a);
+      tocList.appendChild(li);
+    });
+  </script>
 
 </body>
 </html>
