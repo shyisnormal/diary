@@ -1,37 +1,62 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>日記</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* ページ全体 */
+body {
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
+  background-color: #f9f8f7; /* 背景色 */
+  margin: 0;
+  padding: 20px;
+  color: #3b3b3b; /* 本文色 */
+  line-height: 1.9;
+  font-size: 22px; /* PC用：大きめ */
+}
 
-  <h1>日記</h1>
+/* ページタイトル */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px; /* PCで大きめ */
+  color: #3b3b3b;
+  font-weight: normal;
+}
 
-  <!-- 日記記事1 -->
-  <article>
-    <h2>2025年12月28日（日）</h2>
-    <p>
-      9時ごろ起床。あまり寝れた感じがしなかった。ふるさと納税で注文したタオルが届いたので、使う前に洗濯機で洗った。乾燥機は、量が多いと乾かなかった。
-    </p>
-  </article>
+/* 日記記事 */
+article {
+  margin-bottom: 40px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto; /* 中央配置 */
+}
 
-  <!-- 日記記事2 -->
-  <article>
-    <h2>2025-01-02</h2>
-    <p>
-      朝から雨だったので家で読書。午後は近所を散歩して、カフェでコーヒーを飲んだ。
-    </p>
-  </article>
+/* 日付を本文と同じ見た目に */
+article h2 {
+  text-align: left !important;
+  font-family: inherit;    /* 本文と同じフォント */
+  font-size: inherit;      /* 本文と同じサイズ */
+  font-weight: normal;     /* 太字無し */
+  margin-bottom: 8px;      /* 段落間隔 */
+  color: inherit;          /* 本文と同じ色 */
+}
 
-  <!-- 日記記事3 -->
-  <article>
-    <h2>2025-01-03</h2>
-    <p>
-      午前中に買い物。昼食後に映画を観に行った。夜は軽くジョギングして体を動かした。
-    </p>
-  </article>
+/* 本文 */
+article p {
+  text-align: left;
+  margin: 0 0 1em 0;       /* 段落下に少し余白 */
+  color: #3b3b3b;
+  font-size: inherit;      /* PC用フォントサイズを継承 */
+}
 
-</body>
-</html>
+/* レスポンシブ対応：スマホで本文大きく */
+@media (max-width: 640px) {
+  body {
+    font-size: 26px;  /* スマホでも大きめに */
+    line-height: 2;   /* 行間も広めに */
+  }
+
+  h1 {
+    font-size: 32px;  /* タイトルはスマホ用に調整 */
+  }
+
+  article {
+    max-width: 100%;  /* 幅いっぱいに */
+    padding: 15px 20px;
+  }
+}
