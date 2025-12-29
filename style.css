@@ -3,7 +3,7 @@ body {
   font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
   font-size: 22px;
   line-height: 1.9;
-  background-color: #f9f8f7; /* 元の薄いグレーに戻す */
+  background-color: #f9f8f7; /* 元の薄いグレー */
   color: #3b3b3b;
   margin: 0;
   padding: 20px;
@@ -11,20 +11,29 @@ body {
 
 /* ページのコンテンツ幅を制限して中央寄せ */
 .container {
-  max-width: 900px;     /* 最大幅 */
-  margin: 0 auto;       /* 左右中央寄せで余白確保 */
-  padding: 0 50px;      /* 左右にしっかり余白 */
+  width: 70%;           /* 画面幅の70% */
+  max-width: 1200px;    /* 最大幅 */
+  min-width: 600px;     /* 最小幅（狭すぎないように） */
+  margin: 0 auto;       /* 中央寄せで左右余白確保 */
+  padding: 0 20px;      /* 内側余白 */
   box-sizing: border-box;
 }
 
 /* タイトル */
 h1 {
   text-align: center;
-  font-size: 42px;    
+  font-size: 42px;
   font-weight: normal;
   margin-bottom: 40px;
 }
 
 /* 記事全体 */
 article {
-  mar
+  margin-bottom: 30px;
+}
+
+/* 日付 */
+article h2 {
+  font-size: 20px;        
+  font-weight: normal;     
+  margin-top: 30p
