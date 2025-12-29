@@ -36,11 +36,11 @@ article p {
   line-height: 1.9;
 }
 
-/* スマホ用：抜本的に大きく */
+/* スマホ用：本文30px */
 @media (max-width: 768px) {
   body {
-    font-size: 50px;  /* スマホ本文を50pxに */
-    line-height: 2.6;
+    font-size: 30px;  /* スマホ本文30px */
+    line-height: 2.2;
   }
 
   article {
@@ -49,6 +49,6 @@ article p {
   }
 
   h1 {
-    font-size: 42px; /* スマホタイトル調整 */
+    font-size: 40px; /* タイトル調整 */
   }
 }
