@@ -1,62 +1,61 @@
 /* ページ全体 */
 body {
   font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
-  background-color: #f9f8f7; /* 背景色 */
+  background-color: #f9f8f7; /* 明るめ背景 */
   margin: 0;
   padding: 20px;
   color: #3b3b3b; /* 本文色 */
   line-height: 1.9;
-  font-size: 22px; /* PC用：大きめ */
+  font-size: 22px; /* PCで大きめ */
 }
 
 /* ページタイトル */
 h1 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 36px; /* PCで大きめ */
-  color: #3b3b3b;
+  font-size: 36px; /* PCタイトル大きめ */
   font-weight: normal;
 }
 
 /* 日記記事 */
 article {
-  margin-bottom: 40px;
-  max-width: 850px;
+  margin-bottom: 50px;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto; /* 中央配置 */
 }
 
-/* 日付を本文と同じ見た目に */
+/* 日付を本文と同じ見た目 */
 article h2 {
   text-align: left !important;
-  font-family: inherit;    /* 本文と同じフォント */
-  font-size: inherit;      /* 本文と同じサイズ */
-  font-weight: normal;     /* 太字無し */
-  margin-bottom: 8px;      /* 段落間隔 */
-  color: inherit;          /* 本文と同じ色 */
+  font-family: inherit;
+  font-size: inherit;     /* 本文と同じサイズ */
+  font-weight: normal;    /* 太字無し */
+  margin-bottom: 10px;
+  color: inherit;
 }
 
 /* 本文 */
 article p {
   text-align: left;
-  margin: 0 0 1em 0;       /* 段落下に少し余白 */
-  color: #3b3b3b;
-  font-size: inherit;      /* PC用フォントサイズを継承 */
+  margin: 0 0 1.2em 0; /* 段落下に余白 */
+  font-size: inherit;   /* 本文サイズを継承 */
+  line-height: 1.9;     /* 行間広め */
 }
 
-/* レスポンシブ対応：スマホで本文大きく */
-@media (max-width: 640px) {
+/* スマホ最適化 */
+@media (max-width: 768px) {
   body {
-    font-size: 26px;  /* スマホでも大きめに */
-    line-height: 2;   /* 行間も広めに */
-  }
-
-  h1 {
-    font-size: 32px;  /* タイトルはスマホ用に調整 */
+    font-size: 26px;  /* スマホ本文をさらに大きく */
+    line-height: 2.1; /* 行間も増やす */
   }
 
   article {
-    max-width: 100%;  /* 幅いっぱいに */
-    padding: 15px 20px;
+    max-width: 100%;     /* フル幅 */
+    padding: 0 10px;     /* 余白を確保 */
+  }
+
+  h1 {
+    font-size: 32px;     /* スマホタイトル */
   }
 }
