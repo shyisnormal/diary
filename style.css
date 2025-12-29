@@ -1,13 +1,16 @@
+/* ページ全体の背景やフォントなど */
 body {
   font-family: sans-serif;
   background-color: #f2f2f2;
   margin: 20px;
 }
 
+/* ページタイトルを中央寄せ */
 h1 {
   text-align: center;
 }
 
+/* 記事の枠 */
 article {
   background: #ffffff;
   padding: 20px 24px;
@@ -15,10 +18,12 @@ article {
   border-radius: 10px;
 }
 
+/* 日付タイトルを中央寄せ */
 article h2 {
   text-align: center;
 }
 
+/* 本文を左寄せ */
 article p {
   text-align: left;
   line-height: 1.8;
