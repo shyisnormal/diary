@@ -1,9 +1,11 @@
-/* ページ全体 */
-body {
-  font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
-  font-size: 22px;
-  line-height: 1.9;
-  background-color: #f2f1ef; /* 少しだけ暗めのグレー */
-  color: #3b3b3b;
-  margin: 0;
-  pad
+/* 日付 */
+article h2 {
+  font-size: 18px;        /* 本文より少し小さく */
+  font-weight: normal;   /* 太字にしない */
+  line-height: 1.4;      /* 行間を少し詰める */
+  color: #3b3b3b;        /* 本文と同じ色 */
+
+  margin: 0 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #d0d0d0; /* 薄い区切り線 */
+}
