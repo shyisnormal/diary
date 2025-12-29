@@ -1,7 +1,7 @@
 /* ページ全体 */
 body {
   font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
-  font-size: 22px;        /* PC & スマホ共通 */
+  font-size: 22px;
   line-height: 1.9;
   background-color: #f9f8f7;
   color: #3b3b3b;
@@ -19,3 +19,22 @@ h1 {
 
 /* 記事全体 */
 article {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 24px 28px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* 日付 */
+article h2 {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  color: #666;
+}
+
+/* 本文 */
+article p {
+  margin: 0;
+}
