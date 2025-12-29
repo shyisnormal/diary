@@ -28,9 +28,10 @@ article {
 /* 日付 */
 article h2 {
   text-align: left !important;
-  font-size: 22px;
+  font-family: inherit; /* 本文と同じフォントに統一 */
+  font-size: 22px;      /* フォントサイズは本文より少し大きめ */
   margin-bottom: 12px;
-  color: #000000; /* 日付を黒に変更 */
+  color: #000000;       /* 黒色 */
 }
 
 /* 本文 */
@@ -41,4 +42,18 @@ article p {
   font-size: 19px; /* デスクトップ用 */
 }
 
-/
+/* レスポンシブ対応：スマホでフォント大きく */
+@media (max-width: 640px) {
+  body {
+    font-size: 22px;  /* スマホで本文大きめ */
+  }
+
+  article h2 {
+    font-size: 24px;  /* スマホで日付も少し大きく */
+  }
+
+  article {
+    max-width: 100%;  /* 幅いっぱいに */
+    padding: 15px 20px;
+  }
+}
