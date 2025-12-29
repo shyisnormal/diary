@@ -1,7 +1,7 @@
 /* ページ全体 */
 body {
   font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
-  background-color: #f9f8f7; /* 明るめ背景 */
+  background-color: #f9f8f7; /* 背景色 */
   margin: 0;
   padding: 20px;
   color: #3b3b3b; /* 本文色 */
@@ -46,16 +46,9 @@ article p {
 /* スマホ最適化 */
 @media (max-width: 768px) {
   body {
-    font-size: 38px;  /* 抜本的に大きく */
-    line-height: 2.4; /* 行間も広め */
+    font-size: 50px;  /* スマホ本文を50pxに */
+    line-height: 2.6; /* 行間も広め */
   }
 
   article {
     max-width: 100%;
-    padding: 0 15px; /* 余白確保 */
-  }
-
-  h1 {
-    font-size: 36px; /* タイトルもスマホ向けに調整 */
-  }
-}
