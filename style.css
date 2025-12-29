@@ -1,12 +1,12 @@
 /* ページ全体 */
 body {
   font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
-  background-color: #f9f8f7; /* tfukuo.comに近い背景色 */
+  background-color: #f9f8f7; /* 背景色 */
   margin: 0;
   padding: 20px;
-  color: #3b3b3b; /* 本文の文字色 */
+  color: #3b3b3b; /* 本文色 */
   line-height: 1.8;
-  font-size: 19px; /* 読みやすい大きさ */
+  font-size: 19px; /* デスクトップ用フォントサイズ */
 }
 
 /* ページタイトル */
@@ -20,17 +20,17 @@ h1 {
 /* 日記記事 */
 article {
   margin-bottom: 40px;
-  max-width: 850px;   /* 幅を広めに */
+  max-width: 850px;
   margin-left: auto;
-  margin-right: auto;  /* ページ中央に配置 */
+  margin-right: auto; /* 中央配置 */
 }
 
 /* 日付 */
 article h2 {
   text-align: left !important;
-  font-size: 22px;    /* 日付も少し大きめ */
+  font-size: 22px;
   margin-bottom: 12px;
-  color: #8b6d5c;     /* tfukuo.com風ブラウン */
+  color: #000000; /* 日付を黒に変更 */
 }
 
 /* 本文 */
@@ -38,4 +38,7 @@ article p {
   text-align: left;
   margin: 0;
   color: #3b3b3b;
+  font-size: 19px; /* デスクトップ用 */
 }
+
+/
