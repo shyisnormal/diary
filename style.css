@@ -11,9 +11,10 @@ body {
 
 /* ページのコンテンツ幅を制限して中央寄せ */
 .container {
-  max-width: 800px;   /* 表示エリアの最大幅 */
-  margin: 0 auto;     /* 左右中央寄せ */
-  padding: 0 40px;    /* 左右に余白を追加 */
+  max-width: 900px;   /* 表示エリアの最大幅を少し広げる */
+  margin: 0 auto;     /* 左右中央寄せで自然な余白を作る */
+  padding: 0 20px;    /* 最小限の左右余白 */
+  box-sizing: border-box;
 }
 
 /* タイトル */
@@ -34,4 +35,5 @@ article h2 {
   font-size: 20px;        /* 本文より少し小さく */
   font-weight: normal;     /* 太字なし */
   margin-top: 30px;
-  margin-botto
+  margin-bottom: 10px;
+  li
