@@ -15,6 +15,7 @@ h1 {
   margin-bottom: 40px;
   font-size: 32px;
   color: #3b3b3b;
+  font-weight: normal;
 }
 
 /* 日記記事 */
@@ -25,13 +26,14 @@ article {
   margin-right: auto; /* 中央配置 */
 }
 
-/* 日付 */
+/* 日付を本文と完全同じ見た目に */
 article h2 {
   text-align: left !important;
-  font-family: inherit; /* 本文と同じフォントに統一 */
-  font-size: 22px;      /* フォントサイズは本文より少し大きめ */
-  margin-bottom: 12px;
-  color: #000000;       /* 黒色 */
+  font-family: inherit;    /* 本文と同じフォント */
+  font-size: inherit;      /* 本文と同じサイズ */
+  font-weight: normal;     /* 太字無し */
+  margin-bottom: 8px;      /* 少し間隔をあける */
+  color: inherit;          /* 本文と同じ色 */
 }
 
 /* 本文 */
@@ -39,21 +41,4 @@ article p {
   text-align: left;
   margin: 0;
   color: #3b3b3b;
-  font-size: 19px; /* デスクトップ用 */
-}
-
-/* レスポンシブ対応：スマホでフォント大きく */
-@media (max-width: 640px) {
-  body {
-    font-size: 22px;  /* スマホで本文大きめ */
-  }
-
-  article h2 {
-    font-size: 24px;  /* スマホで日付も少し大きく */
-  }
-
-  article {
-    max-width: 100%;  /* 幅いっぱいに */
-    padding: 15px 20px;
-  }
-}
+  font-si
