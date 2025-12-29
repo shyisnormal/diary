@@ -6,7 +6,7 @@ body {
   padding: 20px;
   color: #3b3b3b; /* 本文色 */
   line-height: 1.9;
-  font-size: 22px; /* PCで大きめ */
+  font-size: 22px; /* PC用フォントサイズ */
 }
 
 /* ページタイトル */
@@ -39,23 +39,15 @@ article h2 {
 article p {
   text-align: left;
   margin: 0 0 1.2em 0; /* 段落下に余白 */
-  font-size: inherit;   /* 本文サイズを継承 */
+  font-size: inherit;
   line-height: 1.9;     /* 行間広め */
 }
 
 /* スマホ最適化 */
 @media (max-width: 768px) {
   body {
-    font-size: 26px;  /* スマホ本文をさらに大きく */
-    line-height: 2.1; /* 行間も増やす */
+    font-size: 30px;  /* スマホ本文をさらに大きく */
+    line-height: 2.2; /* 行間も広めに */
   }
 
-  article {
-    max-width: 100%;     /* フル幅 */
-    padding: 0 10px;     /* 余白を確保 */
-  }
-
-  h1 {
-    font-size: 32px;     /* スマホタイトル */
-  }
-}
+  a
