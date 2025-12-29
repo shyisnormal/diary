@@ -20,7 +20,7 @@ article {
 
 /* 日付タイトルを中央寄せ */
 article h2 {
-  text-align: center;
+  text-align: left;
 }
 
 /* 本文を左寄せ */
