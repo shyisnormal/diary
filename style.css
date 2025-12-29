@@ -39,3 +39,6 @@ article p {
   margin: 0;
   text-align: left;
 }
+article p {
+  text-align: left !important;
+}
