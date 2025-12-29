@@ -3,19 +3,17 @@ body {
   font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
   font-size: 22px;
   line-height: 1.9;
-  background-color: #e0dfde; /* 少し暗めのグレーに変更 */
+  background-color: #e0dfde; /* 少し暗めのグレー */
   color: #3b3b3b;
   margin: 0;
   padding: 20px;
-  display: flex;
-  justify-content: center;
 }
 
-/* ページのコンテンツ幅を制限 */
+/* ページのコンテンツ幅を制限して中央寄せ */
 .container {
-  max-width: 800px; /* 表示エリアを狭める */
-  width: 100%;
-  padding: 0 20px; /* 左右の余白 */
+  max-width: 800px; /* 表示エリアの幅 */
+  margin: 0 auto;   /* 左右中央寄せ */
+  padding: 0 20px;  /* 左右の余白 */
 }
 
 /* タイトル */
@@ -33,7 +31,4 @@ article {
 
 /* 日付 */
 article h2 {
-  font-size: 20px; /* 本文より少し小さく */
-  font-weight: normal; /* 太字なし */
-  margin-top: 30px;
-  margin-bottom
+  font-size: 20px; /* 本文より少し小さく *
