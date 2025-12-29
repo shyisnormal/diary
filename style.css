@@ -5,15 +5,15 @@ body {
   margin: 0;
   padding: 20px;
   color: #3b3b3b; /* 本文色 */
-  line-height: 1.8;
-  font-size: 19px; /* デスクトップ用フォントサイズ */
+  line-height: 1.9;
+  font-size: 22px; /* PC用：大きめ */
 }
 
 /* ページタイトル */
 h1 {
   text-align: center;
   margin-bottom: 40px;
-  font-size: 32px;
+  font-size: 36px; /* PCで大きめ */
   color: #3b3b3b;
   font-weight: normal;
 }
@@ -26,19 +26,37 @@ article {
   margin-right: auto; /* 中央配置 */
 }
 
-/* 日付を本文と完全同じ見た目に */
+/* 日付を本文と同じ見た目に */
 article h2 {
   text-align: left !important;
   font-family: inherit;    /* 本文と同じフォント */
   font-size: inherit;      /* 本文と同じサイズ */
   font-weight: normal;     /* 太字無し */
-  margin-bottom: 8px;      /* 少し間隔をあける */
+  margin-bottom: 8px;      /* 段落間隔 */
   color: inherit;          /* 本文と同じ色 */
 }
 
 /* 本文 */
 article p {
   text-align: left;
-  margin: 0;
+  margin: 0 0 1em 0;       /* 段落下に少し余白 */
   color: #3b3b3b;
-  font-si
+  font-size: inherit;      /* PC用フォントサイズを継承 */
+}
+
+/* レスポンシブ対応：スマホで本文大きく */
+@media (max-width: 640px) {
+  body {
+    font-size: 26px;  /* スマホでも大きめに */
+    line-height: 2;   /* 行間も広めに */
+  }
+
+  h1 {
+    font-size: 32px;  /* タイトルはスマホ用に調整 */
+  }
+
+  article {
+    max-width: 100%;  /* 幅いっぱいに */
+    padding: 15px 20px;
+  }
+}
