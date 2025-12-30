@@ -5,20 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>日記</title>
   <style>
-    /* ===== ページ全体 ===== */
     body {
       font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
       font-size: 20px;
       line-height: 1.8;
       background-color: #f9f8f7;
       color: #333;
-
       margin: 0 auto;
-      max-width: 800px; /* PC版で少し余白広げた */
+      max-width: 800px;
       padding: 40px 32px;
     }
 
-    /* ===== タイトル ===== */
     h1 {
       text-align: center;
       font-size: 44px;
@@ -26,12 +23,10 @@
       margin-bottom: 56px;
     }
 
-    /* ===== 記事 ===== */
     article {
       margin-bottom: 48px;
     }
 
-    /* ===== 日付 ===== */
     article h2 {
       font-size: 16px;
       font-weight: normal;
@@ -41,12 +36,10 @@
       border-bottom: 1px solid #cfcfcf;
     }
 
-    /* ===== 本文 ===== */
     article p {
       margin: 0;
     }
 
-    /* ===== スマホ調整 ===== */
     @media (max-width: 600px) {
       body {
         font-size: 18px;
@@ -64,21 +57,46 @@
   <div class="container">
     <h1>日記</h1>
 
-    <article>
-      <h2>2025年1月1日（水）</h2>
-      <p>9時ごろ起床。あまり寝れた感じがしなかった。ふるさと納税で注文したタオルが届いたので、使う前に洗濯機で洗った。</p>
+    <!-- ========================= -->
+    <!-- ▼ 新しい記事を追加する方法 ▼ -->
+    <!-- 1. 下の「サンプル記事」をコピーする -->
+    <!-- 2. data-date に日付を入力（例：2025-01-04） -->
+    <!-- 3. <p> に本文を入力 -->
+    <!-- 4. コピーした <article> ブロックを一番上に貼り付ける -->
+    <!-- これで最新記事が上に表示され、自動で曜日も表示されます -->
+    <!-- ========================= -->
+
+    <article data-date="2025-01-03">
+      <h2></h2>
+      <p>今日は図書館で読書。新しい本を借りて、久しぶりに集中して楽しめた。</p>
     </article>
 
-    <article>
-      <h2>2025年1月2日（木）</h2>
+    <article data-date="2025-01-02">
+      <h2></h2>
       <p>朝から散歩。近所のカフェでコーヒーを飲んだ。天気が良くて気持ちよかった。</p>
     </article>
 
-    <article>
-      <h2>2025年1月3日（金）</h2>
-      <p>午後は図書館で読書。久しぶりに集中できて楽しかった。帰りにスーパーで食材を買い、簡単な夕食を作った。</p>
+    <article data-date="2025-01-01">
+      <h2></h2>
+      <p>9時ごろ起床。ふるさと納税で注文したタオルが届いたので、使う前に洗濯機で洗った。</p>
     </article>
 
   </div>
+
+  <script>
+    // 曜日配列
+    const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
+
+    // すべての記事に対して日付と曜日を自動表示
+    document.querySelectorAll("article").forEach(article => {
+      const dateStr = article.dataset.date; // data-date 属性から取得
+      const dateObj = new Date(dateStr);
+      const year = dateObj.getFullYear();
+      const month = dateObj.getMonth() + 1; // 0スタートなので+1
+      const day = dateObj.getDate();
+      const weekday = weekdays[dateObj.getDay()];
+      article.querySelector("h2").textContent = `${year}年${month}月${day}日（${weekday}）`;
+    });
+  </script>
 </body>
 </html>
