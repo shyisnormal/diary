@@ -3,7 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ありふれた日記</title>
+  <title>日記（GA4対応）</title>
+
+  <!-- ===== Google Analytics (GA4) ===== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-R823BC27PR'); // ← ここを自分の測定IDに置き換える
+  </script>
+
   <style>
     body {
       font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
@@ -55,45 +66,44 @@
 </head>
 <body>
   <div class="container">
-    <h1>ありふれた日記</h1>
+    <h1>日記</h1>
 
     <!-- ========================= -->
     <!-- ▼ 新しい記事を追加する方法 ▼ -->
-    <!-- 1. 下の「サンプル記事」をコピーする -->
+    <!-- 1. 下の <article> をコピー -->
     <!-- 2. data-date に日付を入力（例：2025-01-04） -->
     <!-- 3. <p> に本文を入力 -->
-    <!-- 4. コピーした <article> ブロックを一番上に貼り付ける -->
+    <!-- 4. コピーした <article> を一番上に貼る -->
     <!-- これで最新記事が上に表示され、自動で曜日も表示されます -->
     <!-- ========================= -->
- <article data-date="2025-12-29">
+
+    <article data-date="2025-01-03">
       <h2></h2>
-      <p>数の子の塩抜きをして、出汁に漬けた。八百屋とスーパーであれこれ買い物。年末のスーパーの浮かれた雰囲気は嫌いではない。宇多田ヒカルが、近づきたい君の理想に、と歌っている。本を作るために日記の書き直しをしているが、進まない。1年前の自分の日記を読んだ。去年の年末は松本に行って、それから東京に戻って神保町で演劇を見た。年末の神保町は暗かった。夕方、ChatGPTに質問しながら日記を載せるためのwebサイトを作るが、コミュニケーションがうまくいかない。□□さんに連絡しようか迷うが、そういうことはChatGPTには聞かない。</p>
-    </article>
-    
-    <article data-date="2025-12-28">
-      <h2></h2>
-      <p>9時ごろ起床。あまり寝れた感じがしなかった。ふるさと納税で注文したタオルが届いたので、使う前に洗濯機で洗った。乾燥機は、量が多いと乾かなない。お節にはあまり興味がないが、数の子だけは食べたいと思っている。近所のスーパーを回るが、1人では食べきれない量のものしか売っていない。オオゼキでで小さなパックに入ったものを見つけて、1,200円で買った。塩抜きが必要と書いてあって、ネットでやり方を調べた。歯の食いしばりのためにマウスピースをつけて寝ていて、それが無いと安心して寝れないぐらいなのだが、改善する方法が他にないかと思い、漢方を試してみることにした。夕方、新橋のアスティルへ。今年を振り返ったり、来年したいことを考えたりした。日記を書く場所を変えたいと思い始めて、いろいろ調べた。昨日と今日と明日が続いているような場所で書きたい。</p>
+      <p>今日は図書館で読書。新しい本を借りて、久しぶりに集中して楽しめた。</p>
     </article>
 
-    <article data-date="2025-12-27">
+    <article data-date="2025-01-02">
       <h2></h2>
-      <p>今日から9日間休み。午前中に、買い替えた洗濯機が届いた。中古でもらったものを10年使っていた。洗濯機置場にちゃんと入るか心配だったが、きれいに収まった。と思ったら、ドラム型の蓋の少し丸く出ている部分が洗濯機置場を隠すための引戸に当たってしまい、戸が閉まらなくなった。まあいいや。ジェルボールという洗剤を買ってきて、早速洗濯してみた。乾燥が終わるまでにすごい時間がかかった。あと乾燥中うるさい。慣れかな。ふるさと納税をいつも年末にやるが、今年はタオルとミネラルウォーターとビールを頼んだ。何も面白くないが、そんなものだ。明日から伊豆を2泊3日で歩く予定でいたが、腰がまだ本調子でないし、疲れも溜まっているし、それに野営のためのキャンプ場も予約していないので、延期することにした。夕方、近所の銭湯に行った。露天風呂では、肩から腕に刺青が入った2人の男が、楽しそうに話をしていた。寒かったので、お湯が気持ちよかった。日記を書き始めてから1年が経った。</p>
+      <p>朝から散歩。近所のカフェでコーヒーを飲んだ。天気が良くて気持ちよかった。</p>
     </article>
 
-   
+    <article data-date="2025-01-01">
+      <h2></h2>
+      <p>9時ごろ起床。ふるさと納税で注文したタオルが届いたので、使う前に洗濯機で洗った。</p>
+    </article>
 
   </div>
 
   <script>
     // 曜日配列
-    const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
+    const weekdays = ["日","月","火","水","木","金","土"];
 
-    // すべての記事に対して日付と曜日を自動表示
+    // data-date 属性から日付を読み取り、h2 に自動で「YYYY年M月D日（曜）」を表示
     document.querySelectorAll("article").forEach(article => {
-      const dateStr = article.dataset.date; // data-date 属性から取得
+      const dateStr = article.dataset.date;
       const dateObj = new Date(dateStr);
       const year = dateObj.getFullYear();
-      const month = dateObj.getMonth() + 1; // 0スタートなので+1
+      const month = dateObj.getMonth() + 1;
       const day = dateObj.getDate();
       const weekday = weekdays[dateObj.getDay()];
       article.querySelector("h2").textContent = `${year}年${month}月${day}日（${weekday}）`;
