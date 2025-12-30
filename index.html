@@ -2,107 +2,68 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>日記</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <style>
-    /* ===== 全体 ===== */
+    /* ===== ページ全体 ===== */
     body {
-      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
+      font-size: 20px;
+      line-height: 1.8;
       background-color: #f9f8f7;
       color: #333;
-      font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
-      font-size: 18px;
-      line-height: 1.8;
-    }
 
-    /* ===== レイアウト ===== */
-    .container {
-      max-width: 720px;
       margin: 0 auto;
-      padding: 40px 20px;
+      max-width: 800px; /* PC版で少し余白広げた */
+      padding: 40px 32px;
     }
 
     /* ===== タイトル ===== */
     h1 {
       text-align: center;
-      font-size: 36px;
+      font-size: 44px;
       font-weight: normal;
-      margin-bottom: 48px;
+      margin-bottom: 56px;
     }
 
-    /* ===== 日記 ===== */
+    /* ===== 記事 ===== */
     article {
       margin-bottom: 48px;
-      padding: 0 16px;
     }
 
+    /* ===== 日付 ===== */
     article h2 {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: normal;
-      color: #666;
-      margin: 0 0 12px;
+      line-height: 1.4;
+      margin: 0 0 14px;
       padding-bottom: 6px;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #cfcfcf;
     }
 
+    /* ===== 本文 ===== */
     article p {
       margin: 0;
     }
 
-    /* ===== スマホ ===== */
+    /* ===== スマホ調整 ===== */
     @media (max-width: 600px) {
       body {
-        font-size: 16px;
+        font-size: 18px;
+        padding: 24px 16px;
       }
 
       h1 {
-        font-size: 28px;
-        margin-bottom: 36px;
-      }
-
-      article {
-        padding: 0 8px;
-        margin-bottom: 36px;
+        font-size: 34px;
+        margin-bottom: 40px;
       }
     }
   </style>
 </head>
-
 <body>
   <div class="container">
     <h1>日記</h1>
 
     <article>
-      <h2>
-        <time datetime="2025-01-01">2025年1月1日（水）</time>
-      </h2>
-      <p>
-        朝は少し遅めに起床。窓から入る光がやわらかく、静かな一日が始まった。
-        午後は家でゆっくり過ごし、夜は早めに布団に入った。
-      </p>
-    </article>
-
-    <article>
-      <h2>
-        <time datetime="2025-01-02">2025年1月2日（木）</time>
-      </h2>
-      <p>
-        天気が良かったので近所を散歩した。
-        いつも通らない道を歩くと、新しい発見があって少し楽しい。
-      </p>
-    </article>
-
-    <article>
-      <h2>
-        <time datetime="2025-01-03">2025年1月3日（金）</time>
-      </h2>
-      <p>
-        図書館で本を読んだ。集中できる時間があると、気持ちが整う。
-        帰りにスーパーで買い物をして、簡単な夕食を作った。
-      </p>
-    </article>
-
-  </div>
-</body>
-</html>
+      <h2>2025年1月1日（水）</h2>
+      <p>9時ごろ起床。あまり寝れた感じがしなかった。ふるさと納税で注文したタオルが
