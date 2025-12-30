@@ -1,20 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>日記</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    /* ===== 全体 ===== */
+    body {
+      margin: 0;
+      background-color: #f9f8f7;
+      color: #333;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    /* ===== レイアウト ===== */
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* ===== タイトル ===== */
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      font-weight: normal;
+      margin-bottom: 48px;
+    }
+
+    /* ===== 日記 ===== */
+    article {
+      margin-bottom: 48px;
+      padding: 0 16px;
+    }
+
+    article h2 {
+      font-size: 14px;
+      font-weight: normal;
+      color: #666;
+      margin: 0 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    article p {
+      margin: 0;
+    }
+
+    /* ===== スマホ ===== */
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 28px;
+        margin-bottom: 36px;
+      }
+
+      article {
+        padding: 0 8px;
+        margin-bottom: 36px;
+      }
+    }
+  </style>
+</head>
+
 <body>
   <div class="container">
     <h1>日記</h1>
 
     <article>
       <h2>2025-01-01</h2>
-      <p>9時ごろ起床。あまり寝れた感じがしなかった。ふるさと納税で注文したタオルが届いたので、使う前に洗濯機で洗った。</p>
+      <p>
+        朝は少し遅めに起床。窓から入る光がやわらかくて、静かな一日が始まった。
+        午後は家でゆっくり過ごし、夜は早めに布団に入った。
+      </p>
     </article>
 
     <article>
       <h2>2025-01-02</h2>
-      <p>朝から散歩。近所のカフェでコーヒーを飲んだ。天気が良くて気持ちよかった。</p>
+      <p>
+        天気が良かったので近所を散歩した。いつも通らない道を歩くと、
+        知らない店や風景が見えて少し得した気分になる。
+      </p>
     </article>
 
     <article>
       <h2>2025-01-03</h2>
-      <p>午後は図書館で読書。久しぶりに集中できて楽しかった。帰りにスーパーで食材を買い、簡単な夕食を作った。</p>
+      <p>
+        図書館で本を読んだ。集中できる時間があると、気持ちが整う。
+        帰りにスーパーで買い物をして、簡単な夕食を作った。
+      </p>
     </article>
+
   </div>
 </body>
+</html>
